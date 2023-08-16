@@ -47,7 +47,7 @@ let joinRoomInit = async () => {
 
     channel = await rtmClient.createChannel(roomId)
     await channel.join()
-
+    //channel.on('')
     channel.on('MemberJoined', handleMemberJoined)
     channel.on('MemberLeft', handleMemberLeft)
     channel.on('ChannelMessage', handleChannelMessage)
@@ -378,12 +378,19 @@ console.log('====================================');
 //         recognition.start();
 //     }
 // }
+
+function whiteboard()
+{
+    // location.href = "https://whiteboard-flame.vercel.app/";
+    window.open("https://whiteboard-flame.vercel.app/",'_blank')
+}
 document.getElementById('camera-btn').addEventListener('click', toggleCamera)
 document.getElementById('mic-btn').addEventListener('click', toggleMic)
 document.getElementById('screen-btn').addEventListener('click', toggleScreen)
 document.getElementById('join-btn').addEventListener('click', joinStream)
 document.getElementById('leave-btn').addEventListener('click', leaveStream)
 document.getElementById('transcribe-btn').addEventListener('click', transcribe)
+document.getElementById('whiteboard-btn').addEventListener('click', whiteboard)
 
 joinRoomInit()
 
