@@ -1,0 +1,15 @@
+{
+  "name": "ospmeet",
+  "version": "1.0.0",
+  "description": "A real time messaging & video calling. Youtube tutorial will be upload in the comming days.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "agora-rtm-sdk": "^1.4.5-229",
+    "express": "^4.18.2"
+  }
+}
